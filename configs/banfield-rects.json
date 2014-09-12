@@ -1,0 +1,24 @@
+[
+	"removeTitle",
+	"removeEditorsNSData",
+	"removeComments",
+	"convertIDsToClasses",
+	{
+		"cleanupIDs": {
+			"keepGroupIds": false
+		}
+	},
+	{
+		"removeAttrs": {
+			"attrs": [
+    			"stroke",
+    			"stroke-width",
+    			"fill",
+    			"fill-rule",
+    			"font-family"
+			]
+		}
+	},
+	"cleanupNumericValues",
+	"convertTransform"
+]

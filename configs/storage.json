@@ -1,0 +1,27 @@
+[
+	"removeTitle",
+	"removeEditorsNSData",
+	"removeComments",
+	{
+		"removeElemById": {
+			"ids": ["mock-chart", "block-placeholder"]
+		}
+	},
+	"convertIDsToClasses",
+	{
+		"cleanupIDs": {
+			"keepGroupIds": false
+		}
+	},
+	{
+		"removeAttrs": {
+			"attrs": [
+    			"font-family",
+    			"font-size",
+    			"filter"
+			]
+		}
+	},
+	"cleanupNumericValues",
+	"convertTransform"
+]

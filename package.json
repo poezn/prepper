@@ -1,0 +1,26 @@
+{
+  "name": "svag",
+  "version": "0.0.1",
+  "description": "svag",
+  "main": "index.js",
+  "dependencies": {
+    "jsdom": "~0.11.1",
+    "svgo": "poezn/svgo"
+  },
+  "devDependencies": {
+    "should": "*",
+    "blanket": "*",
+    "travis-cov": "*",
+    "coveralls": "*",
+    "mocha-lcov-reporter": "*",
+    "mocha": "*"
+  },
+  "keywords": [
+    "svg"
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "author": "Michael Porath <michael@halftone.co>",
+  "license": "MIT"
+}

@@ -1,0 +1,29 @@
+[
+	"removeTitle",
+	"removeEditorsNSData",
+	"removeComments",
+	{
+		"removeElemById": {
+			"ids": ["CA-reference", "dots", "placeholder-legend"]
+		}
+	},
+	"convertIDsToClasses",
+	{
+		"cleanupIDs": {
+			"keepGroupIds": false
+		}
+	},
+	{
+		"removeAttrs": {
+			"attrs": [
+    			"stroke",
+    			"stroke-width",
+    			"fill",
+    			"fill-rule",
+    			"font-family",
+    			"fill-opacity"
+			]
+		}
+	},
+	"cleanupNumericValues"
+]
