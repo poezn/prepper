@@ -1,33 +1,8 @@
-svag [![Build Status](https://secure.travis-ci.org/fengmk2/svag.png)](http://travis-ci.org/fengmk2/svag) [![Coverage Status](https://coveralls.io/repos/fengmk2/svag/badge.png)](https://coveralls.io/r/fengmk2/svag)
-=======
-
-![logo](https://raw.github.com/fengmk2/svag/master/logo.png)
-
-Description
-
-* jscoverage: [100%](http://fengmk2.github.com/coverage/svag.html)
-
-## Install
-
-```bash
-$ npm install svag
-```
-
-## Usage
-
-```js
-var svag = require('svag');
-
-svag.foo(function (err) {
-  
-});
-```
-
 ## License 
 
 (The MIT License)
 
-Copyright (c) 2013 Michael Porath &lt;michael@halftone.co&gt;
+Copyright (c) 2013 Michael Porath
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
