@@ -6,7 +6,8 @@ var FS = require('fs'),
     SVGO = require('svgo'),
     prefix,
     svgo,
-    fileConfig;
+    fileConfig,
+    watch;
 
 try {
 	var args = process.argv.slice(2);
@@ -14,6 +15,7 @@ try {
 	fileOut = args[1];
 	prefix = args.length > 2 ? args[2] : "";
 	fileConfig = args.length > 3 ? args[3] : [];
+	watch =  args.length > 4 ? (args[4] == '--watch' ? true : false) : false;
 } catch (e) {
 	console.error(e);
 	console.error("usage: node index.js [fileIn] [fileOut] [prefix] [config-file]")
@@ -36,10 +38,30 @@ var readConfig = function() {
 	    	"plugins": config
 	    });
 
-		transform();
+		if (watch) {
+			transform();
+			startWatcher();
+		} else {
+			transform();
+		}
+
 	});
 
 };
+
+var startWatcher = function() {
+  var watcher;
+  return watcher = FS.watch(fileIn)
+  .on('change', transform)
+  .on('error', function(err) {
+    if (err.code !== 'EPERM') {
+      throw err;
+    }
+    return removeSource(source, base);
+  });
+};
+
+
 
 var transform = function() {
 	FS.readFile(fileIn, 'utf8', function(err, data) {
